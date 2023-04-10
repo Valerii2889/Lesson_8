@@ -1,483 +1,572 @@
-// http://xn--80adth0aefm3i.xn--j1amh/%D0%BF%D1%83%D0%B1%D0%BB%D1%96%D0%BA%D0%B0%D1%86%D1%96%D1%8F/21
+// map
+// const arr = [1, 2, 3, 4, 5, 6, 7];
 
+// const result = arr.map((item, idx, arr) => item * 2);
 
-// function foo(a, b) {
-//     console.log(a, b);
-// }
-
-// console.log(foo);
-
-// foo(5, 10)
-
-
-// function foo(callback){
-//     console.log("callback",callback);
-//     callback(10)
-// }
-
-// function logger(value){
-//     console.log(value);
-// }
-
-// // const numb = 10;
-// // console.log(numb);
-// console.log('logger',logger);
-// foo(logger)
-
-// const arr = [2, 6, 1, 7, 3]
-
-function add(arr) {
-    let total = arr[0];
-
-    for (let i = 1; i < arr.length; i += 1) {
-        total += arr[i]
-    }
-
-    return total
-}
-
-// console.log(add(arr));
-
-
-// function sum(arr) {
-//     let total = arr[0];
-
-//     for (let i = 1; i < arr.length; i += 1) {
-//         total *= arr[i]
-//     }
-
-//     return total
-// }
-
-// console.log(sum(arr));
-
-// function division(arr) {
-//     let total = arr[0];
-
-//     for (let i = 1; i < arr.length; i += 1) {
-//         total /= arr[i]
-//     }
-
-//     return total
-// }
-
-
-// function each(arr, callback) {
-//     let total = arr[0]
-//     for (let i = 1; i < arr.length; i += 1) {
-//         total = callback(total, arr[i])
-//     }
-
-//     return total
-// }
-// console.log(each(arr, add));
-// console.log(each(arr, sum));
-// console.log(each(arr, division));
-
-// function add(first, second) {
-//     return first + second
-// }
-
-// function sum(first, second) {
-//     return first * second
-// }
-
-// function division(first, second) {
-//     return first / second
-// }
-
-
-
-// const arr = [2, 6, 1, 7, 3];
-
-
-// arr.forEach(function (_, idx) {
-//     console.log(idx);
-// })
-
-
-
-// console.log(arr);
-//item -ітеруємий елемент
-//idx -індекс поточного елемента
-//arr - масив який ітеруємо
-
-// arr.forEach(function (item) {
-//     // console.log(`work witn number ${item}`);
-//     // arr[i] = item * 2
-//     // item *= 2
-//     // console.log(item);
-// })
-
-// console.log(arr);
-
-
-// const Array = {
-//     forEach(){
-
-//     }
-
-// }
-// console.log(arr);
-
-
-// function each(arr, callback) {
-//     let total = arr[0];
-//     for (let i = 1; i < arr.length; i += 1) {
-//         total = callback(total, arr[i])
-//     }
-//     return total
-// }
-
-// console.log(each(arr, add));
-
-// console.log(each(arr, sum));
-
-// console.log(each(arr, division));
-
-
-// function add(first, second) {
-//     return first + second
-// }
-
-// function sum(first, second) {
-//     return first * second
-// }
-
-// function division(first, second) {
-//     return first / second
-// }
-
-// declaration
-// foo()
-// function foo(){
-
-// }
-
-
-// expression
-// const boo = function(){
-
-// }
-// boo()
-
-// arrow
-// arguments - відсутній
-// const foo = (...rest) => {
-// console.log(rest);
-
-// };
-// foo(1, 2, 3, 4, 5)
-// foo(1, 2, 3, 4, 21, 532, 5324, 5)
-
-
-
-
-
-// const arr = [2, 6, 1, 7, 3]
-// const add = (first, second) => first + second;
-// const multiply = (first, second) => first * second;
-// const multiply = (first, second) => {
-//     return first * second
-// };
-// const division = (first, second) => first / second;
-
-// function each(arr, callback) {
-//     let total = arr[0];
-//     for (let i = 1; i < arr.length; i += 1) {
-//         total = callback(total, arr[i])
-//     }
-//     return total
-// }
-
-// console.log(each(arr, add));
-// console.log(each(arr, multiply));
-// console.log(each(arr, division));
-
-function foo() {
-
-}
-const boo = () => {}
-const user = {
-    userName: 'Test user',
-    say() {
-        console.log(`Hello ${this.userName}`);
-    },
-    sayHello: () => {
-        console.log(`Hello ${this.userName}`);
-    }
-}
-user.say();
-user.sayHello()
-
-// Перерва до 21.20
-
-
-
-// Example 1 - Коллбек функції
-// Напишіть наступні функції:
-
-// createProduct(obj, callback) - приймає об'єкт товару без id, а також коллбек. Функція створює об'єкт товару, додаючи йому унікальний ідентифікатор у властивість id та викликає коллбек передаючи йому створений об'єкт.
-// logProduct(product) - колббек приймаючий об'єкт продукту і логуючий його в консоль
-// logTotalPrice(product) - колббек, що приймає об'єкт продукту і логіює загальну вартість товару в консоль
-// // Рішення
-
-// function createProduct(obj, callback){
-//     const product = {
-//         id: Date.now(),
-//         ...obj
-//     }
-//     callback(product)
-//     console.log(product);
-// }
-
-// function logProduct(obj){
-// console.log(`Product ${obj.name}`);
-// }
-
-// function logTotalPrice({price, quantity}){
-// console.log(`Total price ${price * quantity}`);
-// }
-// createProduct({
-//     name: '🍎',
-//     price: 30,
-//     quantity: 3
-// }, logProduct);
-// createProduct({
-//     name: '🍋',
-//     price: 20,
-//     quantity: 5
-// }, logTotalPrice);
-
-
-
-// Example 2 - Коллбек функції
-// Додайте в об'єкт account методи withdraw(amount, onSuccess, onError) та deposit(amount, onSuccess, onError), де перший параметр це сума операції, а другий та третій - коллбеки.
-
-// Метод withdraw викликає onError якщо amount більше TRANSACTION_LIMIT або this.balance, і onSuccess в іншому випадку.
-
-// Метод deposit викликає onError якщо amount більше TRANSACTION_LIMIT або менше або дорівнює нулю, і onSuccess в іншому випадку.
-
-// // Рішення
-// const TRANSACTION_LIMIT = 1000;
-
-// const account = {
-//     username: 'Jacob',
-//     balance: 400,
-
-//     withdraw(amount, onSuccess, onError) {
-//         if (amount > TRANSACTION_LIMIT) {
-//             onError(`TRANSACTION LIMIT ${TRANSACTION_LIMIT}`)
-//             return
-      
-//         } else if (this.balance < amount) {
-//             onError('Not enough in the account');
-//             return
-//       }
-
-//         this.balance -= amount;
-//         onSuccess(`Transaction complete ${amount}, balance ${this.balance}.`)
-//     },
-//     deposit(amount, onSuccess, onError) {
-//         if (amount > TRANSACTION_LIMIT) {
-//             onError(`TRANSACTION LIMIT ${TRANSACTION_LIMIT}`);
-//             return;
-//         } else if (amount <= 0) {
-//             onError(`Nice try Bro 😂`);
-//             return;
-//         }
-
-//         this.balance += amount;
-//         onSuccess(`Added ${amount}, balance ${this.balance}`)
-
-//     }
-// };
-
-// function handleSuccess(message) {
-//     console.log(`✅ Success! ${message}`);
-// }
-
-// function handleError(message) {
-//     console.log(`❌ Error! ${message}`);
-// }
-
-// account.withdraw(2000, handleSuccess, handleError);
-// account.withdraw(600, handleSuccess, handleError);
-// account.withdraw(300, handleSuccess, handleError);
-// account.deposit(1700, handleSuccess, handleError);
-// account.deposit(0, handleSuccess, handleError);
-// account.deposit(-600, handleSuccess, handleError);
-// account.deposit(600, handleSuccess, handleError);
-
-
-
-// Example 3 - Коллбек функції
-// Напишіть функцію each(array, callback), яка першим параметром очікує масив, а другим - функцію, яка застосовується до кожного елемента масиву. Функція each повинна повернути новий масив, елементами якого будуть результати виклику коллбека.
-
-// // Рішення
-// function each(array, callback) {
-// }
-
-// console.log(
-//   each([64, 49, 36, 25, 16], function (value) {
-//     return value * 2;
-//   }),
-// );
-// console.log(
-//   each([64, 49, 36, 25, 16], function (value) {
-//     return value - 10;
-//   }),
-// );
-// console.log(
-//   each([64, 49, 36, 25, 16], function (value) {
-//     return Math.sqrt(value);
-//   }),
-// );
-// console.log(
-//   each([1.5, 2.1, 16.4, 9.7, 11.3], function (value) {
-//     return Math.ceil(value);
-//   }),
-// );
-// console.log(
-//   each([1.5, 2.1, 16.4, 9.7, 11.3], function (value) {
-//     return Math.floor(value);
-//   }),
-// );
-
-
-// Example 4 - Стрілочні функції
-// Виконайте рефакторинг коду за допомогою стрілочних функцій.
-
-// const createProduct = (partialProduct, callback) => {
-//     const product = {
-//         id: Date.now(),
-//         ...partialProduct
-//     };
-//     callback(product);
-// }
-
-// const createProduct = (partialProduct, callback) => callback({
-//     id: Date.now(),
-//     ...partialProduct
+// const result = arr.map((item, idx, arr) => {
+//     item * 2
 // });
+// console.log(result);
+// console.log(arr);
+// const arr = [1, 2, 3, 4, 5, 6, 7]
+// const result = arr.map(item => {
+//     if (!(item % 2)) {
+//         return item * 2
+//     }
+//     return item
+// })
+
+// const result = arr.map(item => !(item % 2) ? item * 2 : item)
+
+// console.log(result);
 
 
-// const logProduct = product => console.log(product.name);
-// const logTotalPrice = ({
-//     price,
-//     quantity
-// }) => console.log(price * quantity);
-
-// createProduct({
-//     name: '🍎',
-//     price: 30,
-//     quantity: 3
-// }, logProduct);
-// createProduct({
-//     name: '🍋',
-//     price: 20,
-//     quantity: 5
-// }, logTotalPrice);
 
 
-// Example 5 - Стрілочні функції
-// Виконайте рефакторинг колбеків за допомогою стрілочних функцій.
+// function customMap(arr, callback) {
+//     const result = []
+//     for (let i = 0; i < arr.length; i += 1) {
+//         const item = arr[i];
+//         result.push(callback(item, i, arr));
+//     }
+//     return result;
+// }
+// console.log(customMap(arr, foo));
 
-// const TRANSACTION_LIMIT = 1000;
+// function foo(item, idx, arr) {
+//     if (!(item % 2)) {
+//         return item * 2
+//     }
+//     return item
 
-// const account = {
-//     username: 'Jacob',
-//     balance: 400,
-//     withdraw(amount, onSuccess, onError) {
-//         if (amount > TRANSACTION_LIMIT) {
-//             onError(`Amount should not exceed ${TRANSACTION_LIMIT} credits`);
-//         } else if (amount > this.balance) {
-//             onError(`Amount can't exceed account balance of ${this.balance} credits`);
-//         } else {
-//             this.balance -= amount;
-//             onSuccess(`Account balance: ${this.balance}`);
-//         }
-//     },
-//     deposit(amount, onSuccess, onError) {
-//         if (amount > TRANSACTION_LIMIT) {
-//             onError(`Amount should not exceed ${TRANSACTION_LIMIT} credits`);
-//         } else if (amount <= 0) {
-//             onError(`Amount must be more than 0 credits`);
-//         } else {
-//             this.balance += amount;
-//             onSuccess(`Account balance: ${this.balance}`);
-//         }
-//     },
+// }
+
+// const arr = [{
+//     name: 'User1',
+//     skills: ['html', 'css']
+// }, {
+//     name: 'User2',
+//     skills: ['js', 'react']
+// }, {
+//     name: 'User3',
+//     skills: ['node.js', 'express']
+// }]
+
+// const result = arr.map(item => item.skills.map(skill => skill))
+// console.log(result);
+
+
+
+// flatMap
+// const result = arr.flatMap(item => item.skills)
+// console.log(result);
+
+
+
+// find
+// const arr = [1, 2, 3, 4, 5, 6, 7];
+// const arr = [{
+//     name: 'User1',
+//     skills: ['html', 'css']
+// }, {
+//     name: 'User2',
+//     skills: ['js', 'react']
+// }, {
+//     name: 'User3',
+//     skills: ['node.js', 'express']
+// }]
+// const result = arr.find(item => item > 100)
+// const result = arr.find(item => item.skills.includes('js'))
+// const arr = [1, 2, 3, 4, 5, 6, 7];
+// const arr = [{
+//     name: 'User1',
+//     skills: ['html', 'css']
+// }, {
+//     name: 'User2',
+//     skills: ['js', 'react']
+// }, {
+//     name: 'User3',
+//     skills: ['node.js', 'express']
+// }]
+
+
+
+// findIndex
+// // const result = arr.findIndex(item =>item.skills.includes('node.js'))
+// const result = arr.findIndex(item =>item.skills.includes('avadakedavra'))
+// console.log(result);
+
+
+
+// filter
+// const numbers = [1, 2, 3, 4, 5, 6, 7];
+// const result = numbers.filter((item) => !(item % 2))
+//     .map((item, _, arr) => {
+
+//         console.log(arr);
+//         return item * 2
+//     })
+// console.log(result);
+
+
+// every
+// const numbers = [22, 1, 2, 3, 4, 5, 6, 7];
+// const number2 = [2, 4, 6, 8, 10]
+// const result = numbers.every(item => !(item % 2))
+// console.log(result);
+
+// const arr = [{
+//     name: 'User1',
+//     age: 18
+// }, {
+//     name: 'User2',
+//     age: 12
+// }, {
+//     name: 'User3',
+//     age: 19
+// }]
+
+
+// const result = arr.every(user => user.age >= 18)
+// console.log(result);
+
+// some
+// const numbers = [1, 3, 4, 5, 6, 7];
+// const numbers2 = [1, 23, 43, 7, 9];
+
+
+// const result = numbers2.some(item => {
+//     console.log(item);
+//     return !(item % 2)
+// })
+// console.log(result);
+
+
+
+
+
+// sort
+
+// const numbers = [11, 4, 9, 3, 54, 23, 12]
+// const result = numbers.sort((a, b) => b - a)
+// console.log('result', result);
+// console.log('numbers', numbers);
+
+// const result = [...numbers].sort((a, b) => b - a)
+// console.log('result',result);
+// console.log('numbers',numbers);
+
+// const numbers = [11, 4, 9, 3, 54, 23, 12]
+// numbers.sort()
+// console.log(numbers);
+
+
+// const str = ['s', 'a', 'f', 'B', 'A', 'S']
+// const result = str.sort((a, b) => a - b)
+// const result = str.sort()
+// const result = str.sort((a,b) => b.localeCompare(a))
+// console.log(result);
+
+
+// const arr = [{
+//     name: 'Den',
+//     age: 18
+// }, {
+//     name: 'Slava',
+//     age: 12
+// }, {
+//     name: 'Max',
+//     age: 19
+// }]
+
+// arr.sort((a, b) => a.name.localeCompare(b.name))
+// console.table(arr);
+
+
+//reduce
+// const numbers = [11, 4, 9, 3, 54, 23, 12]
+// const result = numbers.reduce((acc, item) => {
+//     console.log('acc', acc);
+//     console.log('item', item);
+//     console.log('----------------------------------');
+//     return acc + item;
+// }, 0)
+// const numbers = [11, 4, 9, 3, 54, 23, 12];
+// const result = numbers.reduce((acc, item) => {
+//     console.log('acc', acc);
+//     console.log('item', item);
+//     acc.push(item * 2)
+//     return acc
+// }, [])
+// const numbers = [11, 4, 9, 3, 54, 23, 12];
+// const result = numbers.reduce((acc, item) => {
+//     console.log('acc', acc);
+//     console.log('item', item);
+//     return acc.push(item * 2)
+// }, [])
+
+
+
+// Перерва до 21.26 - 27
+
+
+
+
+
+
+// Колекція об'єктів для всіх прикладів з автомобілями
+const cars = [{
+        make: 'Honda',
+        model: 'CR-V',
+        type: 'suv',
+        amount: 14,
+        price: 24045,
+        onSale: true
+    },
+    {
+        make: 'Honda',
+        model: 'Accord',
+        type: 'sedan',
+        amount: 2,
+        price: 22455,
+        onSale: true
+    },
+    {
+        make: 'Mazda',
+        model: 'Mazda 6',
+        type: 'sedan',
+        amount: 8,
+        price: 24195,
+        onSale: false
+    },
+    {
+        make: 'Mazda',
+        model: 'CX-9',
+        type: 'suv',
+        amount: 7,
+        price: 31520,
+        onSale: true
+    },
+    {
+        make: 'Toyota',
+        model: '4Runner',
+        type: 'suv',
+        amount: 19,
+        price: 34210,
+        onSale: false
+    },
+    {
+        make: 'Toyota',
+        model: 'Sequoia',
+        type: 'suv',
+        amount: 16,
+        price: 45560,
+        onSale: false
+    },
+    {
+        make: 'Toyota',
+        model: 'Tacoma',
+        type: 'truck',
+        amount: 4,
+        price: 24320,
+        onSale: true
+    },
+    {
+        make: 'Ford',
+        model: 'F-150',
+        type: 'truck',
+        amount: 11,
+        price: 27110,
+        onSale: true
+    },
+    {
+        make: 'Ford',
+        model: 'Fusion',
+        type: 'sedan',
+        amount: 13,
+        price: 22120,
+        onSale: true
+    },
+    {
+        make: 'Ford',
+        model: 'Explorer',
+        type: 'suv',
+        amount: 6,
+        price: 31660,
+        onSale: false
+    }
+];
+// Example 1 - Метод map
+// Нехай функція getModels повертає масив моделей (поле model) всіх автомобілів.
+
+// const getModels = cars => {
+// return cars.map(car => car.model)
+// };
+// // getModels(cars)
+// console.table(getModels(cars));
+// Example 2 - Метод map
+// Нехай функція makeCarsWithDiscount повертає новий масив об'єктів із змінним значенням властивості price залежно від переданої знижки.
+
+// const makeCarsWithDiscount = (cars, discount) => {
+//     return cars.map(item => ({
+//         ...item,
+//         price : item.price * (1 - discount),
+//     }))
 // };
 
-// const handleSuccess = message => console.log(`✅ Success! ${message}`);
+// console.log(makeCarsWithDiscount(cars, 0.2));
+// console.log(makeCarsWithDiscount(cars, 0.4));
+
+// Example 3 - Метод filter
+// Нехай функція filterByPrice повертає масив автомобілів ціна яких менша ніж значення параметра threshold.
+
+// {
+//     make: 'Ford',
+//     model: 'Explorer',
+//     type: 'suv',
+//     amount: 6,
+//     price: 31660,
+//     onSale: false
+// }
+// const filterByPrice = (cars, threshold) => {
+//     return cars.filter(({price}) => price < threshold)
+// };
+
+// console.log(filterByPrice(cars, 30000));
+// console.log(filterByPrice(cars, 25000));
+
+// Example 4 - Метод filter
+// Нехай функція getCarsWithDiscount повертає масив автомобілів властивість onSale яких true.
+// {
+//     make: 'Ford',
+//     model: 'Explorer',
+//     type: 'suv',
+//     amount: 6,
+//     price: 31660,
+//     onSale: false
+// }
+// const getCarsWithDiscount = cars => {
+//     return cars.filter(({onSale}) => onSale)
+// };
+// const getCarsWithDiscount = cars => cars.filter(({onSale}) => onSale)
+
+// console.table(getCarsWithDiscount(cars));
+
+// Example 5 - Метод filter
+// Нехай функція getCarsWithType повертає масив автомобілів тип яких збігається зі значенням параметра type.
+// {
+//     make: 'Ford',
+//     model: 'Explorer',
+//     type: 'suv',
+//     amount: 6,
+//     price: 31660,
+//     onSale: false
+// }
+// const getCarsWithType = (cars, type) => cars.filter(({type : carType}) => carType === type);
+
+// console.table(getCarsWithType(cars, 'suv'));
+// console.table(getCarsWithType(cars, 'sedan'));
 
 
-// const handleError = message => console.log(`❌ Error! ${message}`);
+// const getFord = (cars, carPrice) => cars.filter(({
+//     price
+// }) => price < carPrice).filter(({
+//     make
+// }) => make === "Honda")
 
 
-// account.withdraw(2000, handleSuccess, handleError);
-// account.withdraw(600, handleSuccess, handleError);
-// account.withdraw(300, handleSuccess, handleError);
-// account.deposit(1700, handleSuccess, handleError);
-// account.deposit(0, handleSuccess, handleError);
-// account.deposit(-600, handleSuccess, handleError);
-// account.deposit(600, handleSuccess, handleError);
+// const getFord = (cars, carPrice, carName) => cars.filter(({
+//     make,
+//     price
+// }) => price < carPrice && make === carName)
+// console.log(getFord(cars, 25000, 'Ford'));
+// Example 6 - Метод find
+// {
+//     make: 'Ford',
+//     model: 'Explorer',
+//     type: 'suv',
+//     amount: 6,
+//     price: 31660,
+//     onSale: false
+// }
+// const getCarByModel = (cars, model) => cars.find(({
+//     model: carModel
+// }) => model === carModel);
+
+// console.log(getCarByModel(cars, 'F-150'));
+// console.log(getCarByModel(cars, 'CX-9'));
+// Example 7 - Метод sort
+// Нехай функція sortByAscendingAmount повертає новий масив автомобілів відсортований за зростанням значення властивості amount.
+// {
+//     make: 'Ford',
+//     model: 'Explorer',
+//     type: 'suv',
+//     amount: 6,
+//     price: 31660,
+//     onSale: false
+// }
+// const sortByAscendingAmount = cars => cars.sort((a, b) => a.price - b.price);
+// const sortByAscendingAmount = cars => [...cars].sort(({price:a}, {price :b}) => a - b);
+// console.log(cars);
+// console.table(sortByAscendingAmount(cars));
+// Example 8 - Метод sort
+// Нехай функція sortByDescendingPrice повертає новий масив автомобілів відсортований за зменшенням значення властивості price.
+
+// const sortByDescendingPrice = cars => [...cars].sort((a,b)=> b.price - a.price);
+// console.log(cars);
+// console.table(sortByDescendingPrice(cars));
+// Example 9 - Метод sort
+// Нехай функція sortByModel повертає новий масив автомобілів відсортований за назвою моделі в алфавітному та зворотному алфавітному порядку, в залежності від значення параметра order.
+// {
+//     make: 'Ford',
+//     model: 'Explorer',
+//     type: 'suv',
+//     amount: 6,
+//     price: 31660,
+//     onSale: false
+// }
+// const sortByModel = (cars, order) => {
+//     if (order === 'asc') {
+//         return [...cars].sort((a, b) => a.model.localeCompare(b.model))
+//     } else {
+//         return [...cars].sort((a, b) => b.model.localeCompare(a.model))
+//     }
+// };
+// const sortByModel = (cars, order) => [...cars].sort(({model: a},{model: b}) => order === 'asc'
+// ? a.localeCompare(b)
+// : b.localeCompare(a));
+// const sortByModel = (cars, order) => [...cars].sort(({model: a},{model: b}) => a.localeCompare(b))
+// const sortByModel = (cars, order) => [...cars].sort(({model: a},{model: b}) => b.localeCompare(a)))
+// console.table(sortByModel(cars, 'asc'));
+// console.table(sortByModel(cars, 'desc'));
+// Example 10 - Метод reduce
+// Нехай функція getTotalAmount повертає загальну кількість автомобілів (значення властивостей amount).
+// {
+//     make: 'Ford',
+//     model: 'Explorer',
+//     type: 'suv',
+//     amount: 6,
+//     price: 31660,
+//     onSale: false
+// }
+// const getTotalAmount = cars => cars.reduce((acc, {amount}) => acc + amount,0);
+
+// console.log(getTotalAmount(cars));
+// Example 11 - Ланцюжки методів
+// Нехай функція getAvailableCarNames повертає масив моделей автомобілів, але тільки тих, які зараз на розпродажі.
+// {
+//     make: 'Ford',
+//     model: 'Explorer',
+//     type: 'suv',
+//     amount: 6,
+//     price: 31660,
+//     onSale: false
+// }
+// const getModelsOnSale = cars => cars.filter(({onSale}) => onSale).map(({model}) => model);
+
+// const getModelsOnSale = cars => cars.filter(({onSale}) => onSale).map(({make, model}) => `${make} ${model}`);
+
+// console.log(getModelsOnSale(cars));
 
 
 
-// Example 6 - Інлайн стрілочні функції
-// Виконайте рефакторинг коду за допомогою стрілочних функцій.
-
-function each(array, callback) {
-    const newArr = [];
-    for (const el of array) {
-        newArr.push(callback(el));
-    }
-    return newArr;
-}
-
-// console.log(each([64, 49, 36, 25, 16], value => value * 2));
-// console.log(each([64, 49, 36, 25, 16], value => value - 10));
-// console.log(each([64, 49, 36, 25, 16], value =>Math.sqr(value)));
-// console.log(each([1.5, 2.1, 16.4, 9.7, 11.3], value => Math.ceil(value)));
-// console.log(each([1.5, 2.1, 16.4, 9.7, 11.3], value => Math.floor(value)));
+// Example 12 - Ланцюжки методів
+// Нехай функція getSortedCarsOnSale повертає масив автомобілів на розпродажі (Властивість onSale), відсортованих за зростанням ціни.
 
 
+/**
+ * Get cars on sale and sort them
+ * @param {Array} cars - Array with object
+ * @returns {Array} - sorted array on sale
+ */
+// const getSortedCarsOnSale = cars => cars.filter(({onSale}) => onSale).sort((a,b) => a.price - b.price);
+// console.log('cars',cars);
+// console.log(getSortedCarsOnSale(cars));
 
-// Example 7 - Метод forEach
-// Виконайте рефакторинг коду за допомогою методу forEach та стрілочні функції.
 
-// function logItems(items) {
-//   console.log(items);
-//   for (let i = 0; i < items.length; i += 1) {
-//     console.log(`${i + 1} - ${items[i]}`);
-//   }
+// const str = 'duaguidgasuidgauisdhasudasdfhsgvfakhfugduashc';
+// const result = str.split('').reduce((acc, item) => {
+//     // acc.hasOwnProperty(item) ? acc[item] += 1 : acc[item] = 1;
+//     // item in acc ? acc[item] += 1 : acc[item] = 1;
+
+//     const keys = Object.keys(acc)
+//     keys.includes(item) ? acc[item] += 1 : acc[item] = 1;
+
+//     return acc
+// }, {})
+// console.log(result);
+// // {
+//     d: 7,
+//     u: 7,
+//     a: 7
 // }
 
-// const logItems = arr => arr.forEach((item, idx) => console.log(`${idx + 1} - ${item}`))
-// logItems(['Mango', 'Poly', 'Ajax']);
-// logItems(['🍎', '🍇', '🍑', '🍌', '🍋']);
 
 
-// Example 8 - Метод forEach
-// Виконайте рефакторинг коду за допомогою методу forEach та стрілочні функції.
+// const arr = ['Honda', 'Audi', 'BMW', "Skoda", "Ford", 'Renault']
 
-// function calсulateAverage(...args) {
-//   let total = 0;
-//   for (let i = 0; i < args.length; i++) {
-//     total += args[i];
-//   }
-//   return total / args.length;
+// Загальна кількість авто 6:
+// 1 Honda
+// 2 Audi
+
+
+// 6 Reno
+
+// const arr = [];
+
+// Вибачте авто немає
+// function logCars(arr) {
+//     const result = arr.reduce((acc, car, idx) => {
+//         // console.log(`${idx+1} - ${car}\n`);
+//         return acc + `${idx+1} - ${car}\n`
+//     }, arr.length ? `Загальна кількість авто ${arr.length}: \n` : `Вибачте авто немає 😥 ${foo()}`);
+//     console.log('------------------------------------------------------------------');
+//     return result
 // }
 
-const calсulateAverage = (...arr) => {
-    let total = 0;
-    arr.forEach(value => total += value)
+// function foo(){
+//     return 'Hello from foo function'
+// }
+// console.log(logCars(['Honda', 'Audi', 'BMW', "Skoda", "Ford", 'Renault']));
+// console.log(logCars([]));
 
-    return total / arr.length
-}
 
-console.log(calсulateAverage(1, 2, 3, 4)); // 2.5
-console.log(calсulateAverage(14, 8, 2)); // 8
-console.log(calсulateAverage(27, 43, 2, 8, 36)); // 23.2
+
+// const fruitBasket = ['banana', 'cherry', 'orange', 'apple', 'cherry', 'orange', 'apple', 'banana', 'cherry', 'orange', 'fig'];
+// const count = fruitBasket.reduce((acc, fruit) => {
+//     // {
+//         // "banana" : 1
+//         // "cherry" : 3
+//     // }
+//     acc[fruit] = (acc[fruit] || 0) + 1;// якщо ключа ще не було створено
+//     // acc[fruit] = (0) + 1;// => 1
+//     // acc[fruit] = (acc[fruit] || 0) + 1;якщо ключ вже існує
+//     // acc[fruit] = acc[fruit]  + 1;
+//     return acc;
+// }, {})
+// count // { banana: 2, cherry: 3, orange: 3, apple: 2, fig: 1 }
+
+// const user = {}
+// user.age
+
+
+// const result = 2 === 2 ? 'Yes' : 'NO'
+// console.log(result);
+
+// const str = 'asdaskfjnaskjfnmaeklsmflasfasdsapoldwa';
+// const obj = abc => [...abc].reduce((acc, item) => {
+//     // console.log(acc);
+//     // acc.hasOwnProperty(item) ? (acc[item] += 1) : (acc[item] = 1);   
+//     // acc[item] = (acc[item] || 0) + 1
+//     return acc;
+// }, {});
+
+
+// console.log(obj(str));
+
+// const allCourses = ['html', 'js', "css", 'js']
+// const uniqueCourses = allCourses.filter((course, index, array) => array.indexOf(course) === index);
+//                                     //   'html'   0                     0                      0
+//                                     //    "js"    1                     1                      1 
+//                                     //    "css"   2                     2                      2 
+//                                     //    'js'    3                     1                      3
